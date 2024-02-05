@@ -89,5 +89,5 @@ video {
 
 @font-face {
   font-family: "Kanit";
-  src: url("Kanit-Black.ttf") format("truetype");
+  src: url("./fonts/Kanit-Black.ttf") format("truetype");
 }
