@@ -1,7 +1,18 @@
 import * as React from "react";
 
-export interface ICoreButtonProps {}
+export enum CoreButtonType {
+  flooded,
+  underlining,
+}
+export interface ICoreButtonProps {
+  text: string;
+  type: CoreButtonType;
+}
 
 export function CoreButton(props: ICoreButtonProps) {
-  return <div>Button</div>;
+  return (
+    <>
+      <hoverText>{props.text}</hoverText>
+    </>
+  );
 }

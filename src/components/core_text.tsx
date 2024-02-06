@@ -11,9 +11,15 @@ export enum CoreTextColor {
   black = "black",
 }
 interface ICoreTextProps {
-  size: CoreTextSize;
-  color: CoreTextColor;
+  size?: CoreTextSize;
+  color?: CoreTextColor;
+  text: string;
+  style?: React.CSSProperties;
 }
 export const CoreText: React.FunctionComponent<ICoreTextProps> = (props) => {
-  return <div style={{ fontFamily: "Kanit", fontSize: props.size, color: props.color }}>1312</div>;
+  return (
+    <div style={Object.assign(props.style ?? {}, { fontFamily: "Kanit", fontSize: props.size, color: props.color })}>
+      {props.text}
+    </div>
+  );
 };
