@@ -3,7 +3,10 @@ import { CoreText, CoreTextSize } from "./components/core_text";
 import { CoreButton, CoreButtonType } from "./components/core_button";
 
 interface IHeaderProps {}
-const logo = require("./assets/logo.jpg");
+
+const up = require("./assets/up.jpg");
+
+const traxLogo = require("./assets/logo.png");
 
 const Header: React.FunctionComponent<IHeaderProps> = (props) => {
   return (
@@ -20,15 +23,42 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
       }}
     >
       <div style={{ display: "flex" }}>
-        <img alt="logo" style={{ width: 100 }} src={String(logo)} />
-        <div style={{ width: "20px" }} />
-        <CoreText text="Trex" size={CoreTextSize.size60} style={{ alignSelf: "center" }} />
+        <img alt="logo" src={traxLogo} style={{ width: "40px" }} />
+        <div style={{ width: "10px" }} />
+        <CoreText
+          text="Trax"
+          size={CoreTextSize.size18}
+          style={{
+            alignSelf: "center",
+            font: "inherit",
+            verticalAlign: "baseline",
+            lineHeight: "9px",
+            fontWeight: "700",
+            fontSize: "90.9090909091%",
+          }}
+        />
       </div>
-      <div>
-        <CoreButton type={CoreButtonType.underlining} text="Get white paper" />
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <CoreButton type={CoreButtonType.flooded} text="Get white paper" />
+        <div style={{ width: "20px" }} />
+        <img alt="up" src={up} style={{ width: "14px" }} />
+
+        <CoreText style={{ fontWeight: 300 }} size={CoreTextSize.size14} text="1$OPEN = 0.1446 TON" />
+        <div style={{ width: "20px" }} />
+        <CoreButton type={CoreButtonType.underlining} text="@OpenTraxCommunity" />
       </div>
     </div>
   );
 };
 
 export default Header;
+// user-select: none;
+// margin: 0;
+// padding: 0;
+// border: 0;
+// font: inherit;
+// vertical-align: baseline;
+// line-height: 18px;
+// font-family: Kanit,sans-serif;
+// font-weight: 300;
+// font-size: 90.9090909091%;

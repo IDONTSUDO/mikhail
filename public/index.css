@@ -87,10 +87,8 @@ video {
   vertical-align: baseline;
 }
 
-@font-face {
-  font-family: "Kanit";
-  src: url("./fonts/Kanit-Black.ttf") format("truetype");
-}
+@import url(https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap);
+
 hoverText {
   text-decoration: none;
   display: inline-block;
