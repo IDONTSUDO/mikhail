@@ -50,7 +50,6 @@ function Child() {
       <hr />
 
       <p dangerouslySetInnerHTML={{ __html: LL.EDIT_AND_SAVE() }}></p>
-      <a className="App-link" href="https://reactjs.org" target="_blank" rel="noopener noreferrer"></a>
     </header>
   );
 }

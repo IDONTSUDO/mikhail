@@ -2,13 +2,11 @@ import * as React from "react";
 import { CoreText, CoreTextSize } from "./components/core_text";
 import { CoreButton, CoreButtonType } from "./components/core_button";
 
-interface IHeaderProps {}
-
 const up = require("./assets/up.jpg");
 
 const traxLogo = require("./assets/logo.png");
 
-const Header: React.FunctionComponent<IHeaderProps> = (props) => {
+const Header: React.FunctionComponent = () => {
   return (
     <div
       style={{
@@ -52,13 +50,3 @@ const Header: React.FunctionComponent<IHeaderProps> = (props) => {
 };
 
 export default Header;
-// user-select: none;
-// margin: 0;
-// padding: 0;
-// border: 0;
-// font: inherit;
-// vertical-align: baseline;
-// line-height: 18px;
-// font-family: Kanit,sans-serif;
-// font-weight: 300;
-// font-size: 90.9090909091%;

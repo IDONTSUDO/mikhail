@@ -86,7 +86,9 @@ video {
   font: inherit;
   vertical-align: baseline;
 }
-
+body {
+  overflow-x: hidden;
+}
 @import url(https://fonts.googleapis.com/css2?family=Kanit:wght@300;400;500;600;700;800;900&display=swap);
 
 hoverText {
@@ -108,4 +110,20 @@ hoverText:focus:after {
 }
 hoverText:hover {
   color: #225384;
+}
+bottomArrowButton {
+  user-select: none;
+  padding: 0;
+  border: 0;
+  font: inherit;
+  vertical-align: baseline;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70px;
+  height: 70px;
+  border-radius: 50px;
+  cursor: pointer;
+  margin: 0 auto;
+  transition: 0.8s;
 }

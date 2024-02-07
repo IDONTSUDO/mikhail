@@ -7,5 +7,6 @@ declare module "*.svg" {
 declare namespace JSX {
   interface IntrinsicElements {
     hoverText: any;
+    bottomArrowButton: any;
   }
 }
