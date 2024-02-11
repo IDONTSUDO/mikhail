@@ -1,49 +1,90 @@
 import * as React from "react";
 import { CoreText, CoreTextSize } from "./components/core_text";
 import { CoreButton, CoreButtonType } from "./components/core_button";
+import { themeStore } from ".";
+import ContainerOutlined from "@ant-design/icons/lib/icons/ContainerOutlined";
+import WalletOutlined from "@ant-design/icons/lib/icons/WalletOutlined";
+import { ArrowUpOutlined } from "@ant-design/icons";
+// import { CoreColor } from "./color";
 
 const up = require("./assets/up.jpg");
 
 const traxLogo = require("./assets/logo.png");
 
 const Header: React.FunctionComponent = () => {
+  const textSize = Number(1025).shLessEq() ? CoreTextSize.size16 : CoreTextSize.size24;
+
   return (
     <div
       style={{
-        backgroundColor: "white",
-        position: "fixed",
-        height: "100px",
+        position: "absolute",
+        height: Number(200).fh(),
         display: "flex",
         alignItems: "center",
-        width: "100%",
+        width: Number((window.outerWidth / 100) * 90).fw(),
         justifyContent: "space-around",
         padding: "10px",
+        zIndex: "1",
       }}
     >
-      <div style={{ display: "flex" }}>
-        <img alt="logo" src={traxLogo} style={{ width: "40px" }} />
-        <div style={{ width: "10px" }} />
-        <CoreText
-          text="Trax"
-          size={CoreTextSize.size18}
-          style={{
-            alignSelf: "center",
-            font: "inherit",
-            verticalAlign: "baseline",
-            lineHeight: "9px",
-            fontWeight: "700",
-            fontSize: "90.9090909091%",
-          }}
-        />
-      </div>
-      <div style={{ display: "flex", alignItems: "center" }}>
-        <CoreButton type={CoreButtonType.flooded} text="Get white paper" />
-        <div style={{ width: "20px" }} />
-        <img alt="up" src={up} style={{ width: "14px" }} />
+      <img alt="logo" src={traxLogo} style={{ height: Number(200).fh() }} />
+      <div style={{ height: Number(200).fh() }}>
+        <div style={{ height: Number(20).fh() }} />
+        {Number(1149).shLessEq() ? (
+          <></>
+        ) : (
+          <>
+            <CoreText
+              text="Trax - Analyze. Trade. Manage."
+              size={CoreTextSize.size28}
+              color="white"
+              style={{
+                alignSelf: "center",
+                font: "inherit",
+                verticalAlign: "baseline",
+                lineHeight: "9px",
+                fontWeight: "700",
+                fontSize: "90.9090909091%",
+              }}
+            />
+          </>
+        )}
 
-        <CoreText style={{ fontWeight: 300 }} size={CoreTextSize.size14} text="1$OPEN = 0.1446 TON" />
+        <div style={{ height: Number(20).fh() }} />
+        {Number(1149).shLessEq() ? (
+          <></>
+        ) : (
+          <CoreText
+            text="Intro: @TraxCommunuty"
+            size={CoreTextSize.size18}
+            color="white"
+            style={{
+              alignSelf: "center",
+              font: "inherit",
+              verticalAlign: "baseline",
+              lineHeight: "9px",
+              fontWeight: "700",
+              fontSize: "90.9090909091%",
+            }}
+          />
+        )}
+      </div>
+      <div></div>
+      <div style={{ display: "flex", alignItems: "center" }}>
+        <CoreButton
+          text="Get white paper"
+          type={CoreButtonType.floodedPrimary}
+          children={<ContainerOutlined style={{ color: "#D6EB4A", marginRight: "5px" }} />}
+        />
         <div style={{ width: "20px" }} />
-        <CoreButton type={CoreButtonType.underlining} text="@OpenTraxCommunity" />
+        <CoreText text="1$OPEN = 1.1446 TON" color="white" />
+        <ArrowUpOutlined style={{ color: "#DEF249", marginLeft: "5px" }} />
+        <div style={{ width: "20px" }} />
+        <CoreButton
+          text="Connect wallet"
+          type={CoreButtonType.floodedSecondary}
+          children={<WalletOutlined style={{ color: "black", marginRight: "5px" }} />}
+        />
       </div>
     </div>
   );

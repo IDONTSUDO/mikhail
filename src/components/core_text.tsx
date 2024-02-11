@@ -2,18 +2,18 @@ import * as React from "react";
 
 export enum CoreTextSize {
   size14 = "14px",
+  size16 = "16px",
   size18 = "18px",
   size22 = "22px",
+  size24 = "24px",
+  size28 = "28px",
   size55 = "55px",
   size60 = "60px",
 }
-export enum CoreTextColor {
-  white = "white",
-  black = "black",
-}
+
 interface ICoreTextProps {
-  size?: CoreTextSize;
-  color?: CoreTextColor;
+  size?: string;
+  color?: string;
   text: string;
   style?: React.CSSProperties;
 }

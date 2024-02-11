@@ -2,18 +2,20 @@ import ReactDOM from "react-dom/client";
 import { useEffect, useState } from "react";
 import { localStorageDetector } from "typesafe-i18n/detectors";
 
-import Header from "./header";
 import TypesafeI18n from "./i18n/i18n-react";
 import { loadLocaleAsync } from "./i18n/i18n-util.async";
 import { detectLocale } from "./i18n/i18n-util";
-import { Block } from "./block";
+
 import { extensions } from "./extensions/extensions";
-import { CoreText } from "./components/core_text";
-const traxLogo = require("./assets/logo.png");
+import { Body } from "./body";
+import { CoreColor } from "./color";
+import { ThemeStore } from "./theme_store";
 extensions();
 
 const detectedLocale = detectLocale(localStorageDetector);
-const downIcon = require("./assets/down.png");
+
+export const themeStore = new ThemeStore();
+
 function App() {
   const [wasLoaded, setWasLoaded] = useState(false);
 
@@ -25,43 +27,15 @@ function App() {
 
   return (
     <TypesafeI18n locale={detectedLocale}>
-      <bottomArrowButton style={{ position: "absolute", top: window.innerHeight - 100, width: "100%" }}>
-        <img
-          width={Number(50).fw()}
-          alt="down"
-          src={downIcon}
-          onClick={() => {
-            window.scroll({
-              top: window.innerHeight,
-              behavior: "smooth",
-            });
-          }}
-        />
-      </bottomArrowButton>
-      <Header />
-      <Block
-        child={
-          <>
-            <CoreText text="tools, dao, aitrax" />
-            <img alt="logo" src={traxLogo} style={{ width: Number(200).fh() }} />
-          </>
-        }
-      />
-      <Block
-        child={
-          <>
-            <CoreText text="tools, dao, aitrax" />
-            <img alt="logo" src={traxLogo} style={{ width: Number(200).fh() }} />
-          </>
-        }
-      />
+      <Body />
     </TypesafeI18n>
   );
 }
 
 const root = ReactDOM.createRoot(document.getElementById("root") as HTMLElement);
+
 root.render(
-  <>
+  <div>
     <App />
-  </>
+  </div>
 );

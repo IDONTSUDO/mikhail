@@ -1,12 +1,15 @@
 import * as React from "react";
+import { DownOutlined } from "@ant-design/icons";
 
 export interface IAppProps {
   child: React.ReactNode;
+  item: number;
+  needBottomButton?: boolean;
 }
 
 export function Block(props: IAppProps) {
   return (
-    <div style={{ width: "100vw", height: "100vh" }}>
+    <div className="background" style={{ width: "100vw", height: "100vh" }}>
       <div
         style={{
           position: "relative",
@@ -20,6 +23,19 @@ export function Block(props: IAppProps) {
       >
         {props.child}
       </div>
+      {props.needBottomButton ?? (
+        <bottomArrowButton style={{ position: "absolute", top: window.innerHeight * props.item - 100, width: "100%" }}>
+          <DownOutlined
+            onClick={() => {
+              window.scroll({
+                top: window.innerHeight * props.item,
+                behavior: "smooth",
+              });
+            }}
+            style={{ fontSize: "25px", color: "rgba(222, 242, 73, 1)" }}
+          />
+        </bottomArrowButton>
+      )}
     </div>
   );
 }

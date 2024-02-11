@@ -9,6 +9,7 @@ export type Locales =
 	| 'de'
 	| 'en'
 	| 'it'
+	| 'ru'
 
 export type Translation = RootTranslation
 

@@ -127,3 +127,12 @@ bottomArrowButton {
   margin: 0 auto;
   transition: 0.8s;
 }
+.scale {
+  transition: 1s; /* Время эффекта */
+}
+.scale:hover {
+  transform: scale(1.2); /* Увеличиваем масштаб */
+}
+.background {
+  background: linear-gradient(180deg, #032340 0%, #032340 32.5%, #316da1 100%);
+}
