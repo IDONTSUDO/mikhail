@@ -106,45 +106,14 @@ export const Body = observer(() => {
             >
               {isMobile ? (
                 <>
-                  <div style={{ display: "flex", padding: "20px", flexDirection: "column" }}>
-                    <CoreText text="Legal" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
-                    <div style={{ height: "20px" }} />
-                    <CoreText
-                      text="Terms of use"
-                      size={CoreTextSize.size14}
-                      color="#DEF249"
-                      style={{ fontWeight: "400" }}
-                    />
-                    <div style={{ height: "10px" }} />
-                    <CoreText text="Privicy" size={CoreTextSize.size14} color="#DEF249" style={{ fontWeight: "400" }} />
-                    <div style={{ height: "20px" }} />
-                    <CoreText text="Links" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
-                    <div style={{ height: "10px" }} />
-                    <CoreText text="Twitter" size={CoreTextSize.size14} color="#DEF249" style={{ fontWeight: "400" }} />
-                    <div style={{ height: "10px" }} />
-                    <CoreText text="TG" size={CoreTextSize.size14} color="#DEF249" style={{ fontWeight: "400" }} />
-                    <div style={{ height: "10px" }} />
-                    <CoreText
-                      text="Partners"
-                      size={CoreTextSize.size14}
-                      color="#DEF249"
-                      style={{ fontWeight: "400" }}
-                    />
-
-                    <div style={{ height: "20px" }} />
-                    <CoreText
-                      color="white"
-                      text="Trax - Analyze. Trade. Manage."
-                      size={CoreTextSize.size16}
-                      style={{ alignSelf: "center" }}
-                    />
-                    <img style={{ width: "100px", alignSelf: "center" }} src={traxLogo} />
-                    <CoreText
-                      color="white"
-                      text="2023 All rights reserved"
-                      size={CoreTextSize.size16}
-                      style={{ alignSelf: "center" }}
-                    />
+                  <div style={{ placeContent: "center", display: "flex", padding: "30px", alignItems: "center" }}>
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <CoreText text="Legal" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
+                    </div>
+                    <img alt="logo" src={traxLogo} style={{ width: Number(200).fh() }} />
+                    <div style={{ display: "flex", flexDirection: "column" }}>
+                      <CoreText text="Links" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
+                    </div>
                   </div>
                 </>
               ) : (
