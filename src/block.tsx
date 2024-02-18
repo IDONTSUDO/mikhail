@@ -9,7 +9,7 @@ export interface IAppProps {
 
 export function Block(props: IAppProps) {
   return (
-    <div className="background" style={{ width: "100vw", height: "100vh" }}>
+    <div className="background" style={{ height: "100vh" }}>
       <div
         style={{
           position: "relative",
@@ -23,7 +23,7 @@ export function Block(props: IAppProps) {
       >
         {props.child}
       </div>
-      {props.needBottomButton ?? (
+      {/* {props.needBottomButton ?? (
         <bottomArrowButton style={{ position: "absolute", top: window.innerHeight * props.item - 100, width: "100%" }}>
           <DownOutlined
             onClick={() => {
@@ -35,7 +35,7 @@ export function Block(props: IAppProps) {
             style={{ fontSize: "25px", color: "rgba(222, 242, 73, 1)" }}
           />
         </bottomArrowButton>
-      )}
+      )} */}
     </div>
   );
 }
