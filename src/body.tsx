@@ -7,6 +7,7 @@ import { Block } from "./block";
 import { Card } from "./components/card";
 import { CardPrimary } from "./components/card_primary";
 import { DownOutlined } from "@ant-design/icons";
+import { Logo } from "./logo";
 
 const traxLogo = require("./assets/logo.png");
 const minter = require("./assets/minter.png");
@@ -93,14 +94,13 @@ export const Body = observer(() => {
             <div style={{ height: "100px" }}>
               <AnimationTextTyping texts={["Analyze. Trade. Manage."]} />
             </div>
-            <img alt="logo" src={traxLogo} style={{ width: Number(200).fh() }} />
 
+            <Logo width={200} height={200} />
+            <div style={{ height: "10px" }} />
             <div
               style={{
-                // height: "390px",
                 background: "#032340",
                 width: "100%",
-                // position: "relative",
                 zIndex: "1",
               }}
             >
@@ -110,7 +110,7 @@ export const Body = observer(() => {
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       <CoreText text="Legal" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
                     </div>
-                    <img alt="logo" src={traxLogo} style={{ width: Number(200).fh() }} />
+                    <Logo width={200} height={200} />
                     <div style={{ display: "flex", flexDirection: "column" }}>
                       <CoreText text="Links" size={CoreTextSize.size18} color="#DEF249" style={{ fontWeight: "400" }} />
                     </div>
@@ -123,7 +123,7 @@ export const Body = observer(() => {
                       <CoreText
                         style={{ padding: "10px", fontWeight: "400" }}
                         size={textSize}
-                        text="Trax - Analyze. Trade. Manage."
+                        text="Ton AI Generated Application"
                         color="white"
                       ></CoreText>
                     </div>
@@ -151,7 +151,8 @@ export const Body = observer(() => {
                           style={{ fontWeight: "400" }}
                         />
                       </div>
-                      <img style={{ width: Number(200).fw(), height: Number(200).fh() }} src={traxLogo} />
+
+                      <Logo width={200} height={200} />
                       <div style={{ width: Number(20).fw() }}></div>
                       <div>
                         <CoreText

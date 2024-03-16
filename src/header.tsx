@@ -4,6 +4,7 @@ import { CoreButton, CoreButtonType } from "./components/core_button";
 import ContainerOutlined from "@ant-design/icons/lib/icons/ContainerOutlined";
 import WalletOutlined from "@ant-design/icons/lib/icons/WalletOutlined";
 import { ArrowUpOutlined } from "@ant-design/icons";
+import { Logo } from "./logo";
 // import { CoreColor } from "./color";
 
 interface TextAdaptiveProps {
@@ -32,7 +33,7 @@ const TraxAnalyzeText = (props: TextAdaptiveProps) => {
 
   return (
     <CoreText
-      text="Trax - Analyze. Trade. Manage."
+      text="Ton AI Generated Application"
       size={props.size}
       color="white"
       style={
@@ -98,7 +99,8 @@ const Header: React.FunctionComponent = () => {
           zIndex: "1",
         }}
       >
-        <img alt="logo" src={traxLogo} style={{ height: Number(200).fh() }} />
+        <Logo width={200} height={200} />
+
         <div style={{ height: Number(200).fh() }}>
           <div style={{ height: Number(20).fh() }} />
           {Number(1149).shLessEq() ? (
@@ -106,7 +108,7 @@ const Header: React.FunctionComponent = () => {
           ) : (
             <>
               <CoreText
-                text="Trax - Analyze. Trade. Manage."
+                text="Ton AI Generated Application"
                 size={CoreTextSize.size28}
                 color="white"
                 style={{

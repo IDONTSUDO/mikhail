@@ -136,3 +136,7 @@ bottomArrowButton {
 .background {
   background: linear-gradient(180deg, #032340 0%, #032340 32.5%, #316da1 100%);
 }
+@font-face {
+  font-family: "Candal";
+  src: url("./Candal.woff") format("woff");
+}
